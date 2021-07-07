@@ -1,9 +1,9 @@
-[submodule "msc/g-auth"]
-	path = msc/g-auth
+[submodule "microservice/g-auth"]
+	path = microservice/g-auth
 	url = https://github.com/CrisBogucki/cb-msc-g-auth.git
-[submodule "lib/smp-lib"]
-	path = lib/smp-lib
+[submodule "microservice-lib/smp-lib"]
+	path = microservice-lib/smp-lib
 	url = https://github.com/CrisBogucki/cb-msc-smp-lib.git
-[submodule "lib/bcr-lib"]
-	path = lib/bcr-lib
+[submodule "microservice-lib/bcr-lib"]
+	path = microservice-lib/bcr-lib
 	url = https://github.com/CrisBogucki/cb-msc-bcr-lib.git
