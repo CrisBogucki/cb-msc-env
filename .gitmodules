@@ -1,0 +1,9 @@
+[submodule "msc/g-auth"]
+	path = msc/g-auth
+	url = https://github.com/CrisBogucki/cb-msc-g-auth.git
+[submodule "lib/smp-lib"]
+	path = lib/smp-lib
+	url = https://github.com/CrisBogucki/cb-msc-smp-lib.git
+[submodule "lib/bcr-lib"]
+	path = lib/bcr-lib
+	url = https://github.com/CrisBogucki/cb-msc-bcr-lib.git
