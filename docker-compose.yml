@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:  
+  # Broker komunikatów
+  l-rabbitmq:
+    image: rabbitmq:3-management
+    hostname: l-rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+      STOMP_DEFAULT_USER: "guest"
+      STOMP_DEFAULT_PASS: "guest"
+    ports:
+      - "15672:15672" #port do komunikacji web-managament
+      - "5672:5672"   #port do komunikacji web-managament
+      - "55674:55674" #port do komunikacji STOMP-a
+      - "15674:15674" #port do komunikacji STOMP-a
+    volumes:
+      - ./enabled_plugins:/etc/rabbitmq/enabled_plugins
+    networks:
+      - backend
+  
+  # Serwis autoryzacyjny
+  g-auth:
+    hostname: g-auth
+    image: g-auth:latest
+    build:
+      context: ./microservice/g-auth
+      dockerfile: Dockerfile
+    networks:
+      - backend
+ 
+networks:
+  backend:
+    name: cb-msc
+  
+      
+ # docker-compose up -d
