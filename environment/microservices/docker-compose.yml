@@ -5,7 +5,7 @@ services:
     hostname: g-auth
     image: g-auth:latest
     build:
-      context: ./../../microservice/g-auth
+      context: ./../../microservices/g-auth
       dockerfile: Dockerfile
     depends_on:
       - l-rabbitmq

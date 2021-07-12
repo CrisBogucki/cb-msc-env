@@ -15,13 +15,6 @@ PRINT_BANNER() {
 }
 
 
-UPDATE_SUMBODULES()
-{
-  git submodule foreach git fetch
-  git submodule foreach git pull origin main
-  git submodule foreach git checkout main
-}
-
 UPDATE_MICROSERVICES() {
 echo "Updating microservices ..............."
 for msc in g-auth g-auth
