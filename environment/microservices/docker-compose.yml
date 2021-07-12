@@ -7,8 +7,6 @@ services:
     build:
       context: ./../../microservices/g-auth
       dockerfile: Dockerfile
-    depends_on:
-      - l-rabbitmq
     networks:
       microservices:
  
