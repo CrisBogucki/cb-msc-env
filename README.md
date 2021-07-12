@@ -8,6 +8,12 @@ Docker environment specifications
   \./update.sh
 ```
 
+### Update
+
+```bash
+  ./update.sh
+```
+
 ### Deploy
 
 ```bash
