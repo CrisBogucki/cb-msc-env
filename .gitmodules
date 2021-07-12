@@ -7,3 +7,6 @@
 [submodule "microservice-lib/bcr-lib"]
 	path = microservice-lib/bcr-lib
 	url = https://github.com/CrisBogucki/cb-msc-bcr-lib.git
+[submodule "microservices/g-auth"]
+	path = microservices/g-auth
+	url = https://github.com/CrisBogucki/cb-msc-g-auth.git

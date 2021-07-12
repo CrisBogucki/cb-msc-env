@@ -24,10 +24,10 @@ UPDATE_SUMBODULES()
 
 UPDATE_MICROSERVICES() {
 echo "Updating microservices ..............."
-for msc in g-auth
+for msc in g-auth g-auth
 do
   echo "Updating $msc microservice"
-  cd ./microservice/$msc
+  cd ./microservices/$msc
   clear
   ./update.sh
   cd ../..
@@ -38,5 +38,4 @@ echo "Updating  microservices .......... done"
 }
 
 PRINT_BANNER
-UPDATE_SUMBODULES
 UPDATE_MICROSERVICES
