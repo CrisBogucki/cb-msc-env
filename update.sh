@@ -14,9 +14,16 @@ PRINT_BANNER() {
 '
 }
 
+
+UPDATE_SUMBODULES()
+{
+  git submodule foreach git fetch
+  git submodule foreach git checkout master
+}
+
 UPDATE_MICROSERVICES() {
 echo "Updating microservices ..............."
-for msc in g-auth g-auth g-auth
+for msc in g-auth
 do
   echo "Updating $msc microservice"
   cd ./microservice/$msc
@@ -30,4 +37,5 @@ echo "Updating  microservices .......... done"
 }
 
 PRINT_BANNER
+UPDATE_SUMBODULES
 UPDATE_MICROSERVICES
