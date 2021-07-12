@@ -9,8 +9,8 @@ services:
       RABBITMQ_DEFAULT_USER: "rabbitmq"
       RABBITMQ_DEFAULT_PASS: "rabbitmq"
       RABBITMQ_DEFAULT_VHOST: "/"
-      STOMP_DEFAULT_USER: "guest"
-      STOMP_DEFAULT_PASS: "guest"
+      STOMP_DEFAULT_USER: "rabbitmq"
+      STOMP_DEFAULT_PASS: "rabbitmq"
     ports:
       - "15672:15672" #port do komunikacji web-managament
       - "5672:5672"   #port do komunikacji web-managament
@@ -19,21 +19,13 @@ services:
     volumes:
       - ./enabled_plugins:/etc/rabbitmq/enabled_plugins
     networks:
-      - backend
-  
-  # Serwis autoryzacyjny
-  g-auth:
-    hostname: g-auth
-    image: g-auth:latest
-    build:
-      context: ./microservice/g-auth
-      dockerfile: Dockerfile
-    networks:
-      - backend
+      microservices:
  
 networks:
-  backend:
-    name: cb-msc
+  microservices:
+    name: msc
   
       
- # docker-compose up -d
+ # export COMPOSE_PROJECT_NAME=cb-msc
+ # docker compose up --build
+  

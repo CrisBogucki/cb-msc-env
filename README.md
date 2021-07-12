@@ -19,3 +19,9 @@ bcr-lib
 ### Microfrentends
 g-frame
 
+### Docker-compose 
+```bash
+export COMPOSE_PROJECT_NAME=cb-msc
+docker compose up -d
+```
+
