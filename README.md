@@ -8,6 +8,13 @@ Docker environment specifications
   \./update.sh
 ```
 
+### Deploy
+
+```bash
+    ./deploy-brocker.sh
+    ./deploy-microservices.sh
+```
+
 ### Microservices
 g-gframe
 g-auth
@@ -19,9 +26,4 @@ bcr-lib
 ### Microfrentends
 g-frame
 
-### Docker-compose 
-```bash
-export COMPOSE_PROJECT_NAME=cb-msc
-docker compose up -d
-```
 
