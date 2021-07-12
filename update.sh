@@ -18,7 +18,8 @@ PRINT_BANNER() {
 UPDATE_SUMBODULES()
 {
   git submodule foreach git fetch
-  git submodule foreach git checkout master
+  git submodule foreach git pull origin main
+  git submodule foreach git checkout main
 }
 
 UPDATE_MICROSERVICES() {
